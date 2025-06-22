@@ -1,0 +1,155 @@
+:root {
+    --primary-bg: #1a1a1d;
+    --secondary-bg: #2a2a2e;
+    --primary-text: #c5c6c7;
+    --accent-color: #66fcf1;
+    --border-color: #4b5d67;
+    --hover-bg: #3a3a3e;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: var(--accent-color);
+    margin: 0;
+}
+
+#main-content {
+    display: flex;
+    gap: 20px;
+}
+
+#video-player-section {
+    flex: 3;
+}
+
+#playlist-section {
+    flex: 2;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 10px;
+    border-left: 1px solid var(--border-color);
+    padding-left: 20px;
+}
+
+#video-player {
+    width: 100%;
+    background-color: #000;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#current-video-title {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: var(--primary-text);
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+#bookmark-btn, #status-select {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#bookmark-btn {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+    font-weight: bold;
+}
+
+#bookmark-btn:hover {
+    opacity: 0.9;
+}
+
+#status-select, #notes-input {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    border: 1px solid var(--border-color);
+}
+
+#notes-container {
+    margin-top: 15px;
+}
+
+#notes-input {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.course-group {
+    margin-bottom: 20px;
+}
+
+.course-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.video-item {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border: 1px solid transparent;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.video-item:hover {
+    background-color: var(--hover-bg);
+}
+
+.video-item.active {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+    border-color: var(--accent-color);
+}
+
+.video-item .status {
+    font-size: 0.8em;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 10px;
+    color: var(--primary-bg);
+}
+
+.status.To-Watch { background-color: #f0ad4e; }
+.status.Watching { background-color: #5bc0de; }
+.status.Completed { background-color: #5cb85c; }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Bookmarker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Video Course Bookmarker</h1>
+            <p>Scan your local video courses and track your progress.</p>
+        </header>
+
+        <div id="main-content">
+            <div id="video-player-section">
+                <h2 id="current-video-title">Select a video to play</h2>
+                <video id="video-player" controls></video>
+                <div id="controls">
+                    <button id="bookmark-btn">Bookmark Timestamp</button>
+                    <div id="status-container">
+                        <label for="status-select">Status:</label>
+                        <select id="status-select">
+                            <option value="To Watch">To Watch</option>
+                            <option value="Watching">Watching</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="notes-container">
+                    <label for="notes-input">Notes:</label>
+                    <textarea id="notes-input" placeholder="Add notes for this video..."></textarea>
+                </div>
+            </div>
+
+            <div id="playlist-section">
+                <h2>Course Playlist</h2>
+                <div id="video-list">
+                    <p>Run the `scanner.py` script and refresh to see your videos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="videos.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

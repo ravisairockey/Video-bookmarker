@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Video Bookmarker
+Comment=Bookmark and track progress on local video courses
+Exec=/home/amilgaul/CURSOR/Test/video-bookmarker/launch.sh
+Icon=video-x-generic
+Terminal=false
+Type=Application
+Categories=AudioVideo;
