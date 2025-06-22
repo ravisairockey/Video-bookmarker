@@ -22,26 +22,26 @@ The system is composed of a lightweight Python backend for scanning and a pure H
 ```mermaid
 graph TD
     subgraph "File Scanning (One-time)"
-        A[Video Files] --> B{Python Scanner (scanner.py)};
-        B --> C[videos.js];
+        A[Video Files] --> B{Python Scanner (scanner.py)}
+        B --> C[videos.js]
     end
 
     subgraph "Web Application"
-        D[index.html] --> E[Browser];
-        F[style.css] --> E;
-        G[app.js] --> E;
-        C --> G;
+        D[index.html] --> E[Browser]
+        F[style.css] --> E
+        G[app.js] --> E
+        C --> G
     end
 
     subgraph "User Interaction"
-        H(Run Python Scripts) --> B;
-        I(Open index.html or use Desktop Shortcut) --> E;
+        H(Run Python Scripts) --> B
+        I(Open index.html or use Desktop Shortcut) --> E
     end
 
     subgraph "Application Features"
-        E -- "Displays" --> J[Video List & Player];
-        J -- "Saves/Loads" --> K[Browser LocalStorage];
-        K -- "Stores" --> L[Timestamps, Status, Notes];
+        E -- "Displays" --> J[Video List & Player]
+        J -- "Saves/Loads" --> K[Browser LocalStorage]
+        K -- "Stores" --> L[Timestamps, Status, Notes]
     end
 ```
 
